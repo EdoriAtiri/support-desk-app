@@ -74,7 +74,13 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route   /api/users/me
 // @access  Public
 const getMe = asyncHandler(async (req, res) => {
-  res.send('me')
+  // Return only necessary data from the request
+  const user = {
+    id: req.user._id,
+    email: req.user.email,
+    name: req.user.name,
+  }
+  res.status(200).json(user)
 })
 
 // Generate token

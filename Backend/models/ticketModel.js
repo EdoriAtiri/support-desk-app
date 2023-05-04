@@ -5,7 +5,7 @@ const ticketSchema = mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: 'UserSchema',
+      ref: 'User',
     },
     product: {
       type: 'String',

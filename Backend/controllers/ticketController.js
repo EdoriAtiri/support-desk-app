@@ -100,7 +100,7 @@ const deleteTicket = asyncHandler(async (req, res) => {
     throw new Error('Not Authorized')
   }
 
-  await ticket.remove()
+  await Ticket.remove()
 
   res.status(200).json({ success: true })
 })
@@ -142,4 +142,6 @@ module.exports = {
   getTickets,
   getTicket,
   createTicket,
+  deleteTicket,
+  updateTicket,
 }

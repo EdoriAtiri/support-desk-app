@@ -6,7 +6,9 @@ import BackButton from '../../components/BackButton'
 import TicketItem from '../../components/TicketItem'
 
 function Tickets() {
-  const { tickets, isLoading, isSuccess } = useSelector((state) => state.ticket)
+  const { tickets, isLoading, isSuccess } = useSelector(
+    (state) => state.tickets
+  )
 
   const dispatch = useDispatch()
 
@@ -19,7 +21,7 @@ function Tickets() {
   }, [dispatch, isSuccess])
 
   useEffect(() => {
-    dispatch(getTickets)
+    dispatch(getTickets())
   }, [dispatch])
 
   if (isLoading) {

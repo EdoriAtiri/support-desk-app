@@ -15,7 +15,6 @@ function Ticket() {
     (state) => state.tickets
   )
 
-  const params = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const { ticketId } = useParams()

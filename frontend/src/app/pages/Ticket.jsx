@@ -57,6 +57,13 @@ function Ticket() {
     navigate('/tickets')
   }
 
+  // Create note submit
+  const onNoteSubmit = (e) => {
+    e.preventDefault()
+    console.log('Submit')
+    closeModal()
+  }
+
   // Open/Close Modal
   const openModal = () => setModalIsOpen(true)
   const closeModal = () => setModalIsOpen(false)
